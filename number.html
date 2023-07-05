@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Arrays</h2>
+
+    <p>The Array.sort() method sorts the elements of an array.</p>
+
+    <p id="demo"></p>
+
+    <script>
+      const a = [2, 4, 9, 11, 8];
+      b = 0;
+
+      for (i = 0; i < a.length; i++) {
+        if (b < a[i]) {
+          b = a[i];
+        }
+      }
+      document.getElementById("demo").innerHTML = b;
+
+      console.log("Largest Number =", b);
+    </script>
+  </body>
+</html>
