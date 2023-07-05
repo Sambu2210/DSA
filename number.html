@@ -8,17 +8,21 @@
     <p id="demo"></p>
 
     <script>
-      const a = [2, 4, 9, 11, 8];
-      b = 0;
+      const a = [2, 12, 9, 11, 8];
 
       for (i = 0; i < a.length; i++) {
-        if (b < a[i]) {
-          b = a[i];
+        for (j = i + 1; j < a.length; j++) {
+          if (a[i] > a[j]) {
+            temp = a[j];
+            a[j] = a[i];
+            a[i] = temp;
+          }
         }
       }
-      document.getElementById("demo").innerHTML = b;
 
-      console.log("Largest Number =", b);
+      console.log(a);
+      console.log("The Largest Number is", a[a.length - 1]);
+      console.log("The Second Largest Number is", a[a.length - 2]);
     </script>
   </body>
 </html>
