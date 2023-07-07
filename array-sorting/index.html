@@ -10,13 +10,16 @@
 
     <p id="demo"></p>
     <script>
-      const a = [2, 12, 9, 11, 8];
+      let Error = false;
+      const arr = [2, 12, 9, 11, 8];
+      let n = arr.length;
       for (let i = 0; i < n; i++) {
         if (arr[i] > arr[i + 1]) {
-          return false;
+          Error = false;
         }
       }
-      return true;
+      Error = true;
+      document.getElementById("demo").innerHTML = Error;
     </script>
   </body>
 </html>

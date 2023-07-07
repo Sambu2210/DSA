@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      let a = [1, 2, 2];
+
+      let n = a.length;
+      let d = Duplicate(a);
+      const value = [];
+
+      function Duplicate(a) {
+        let x = 0;
+        for (let i = 1; i < n; i++) {
+          if (a[x] != a[i]) {
+            x++;
+            a[x] = a[i];
+          }
+        }
+        return x + 1;
+      }
+      for (let j = 0; j < d; j++) {
+        value.push(a[j]);
+      }
+      console.log(value);
+
+      //   const arr = [1, 1, 2, 2, 2, 3, 3];
+      //   const k = removeDuplicates(arr);
+      //   const value = [];
+      //   function removeDuplicates(arr) {
+      //     let a = 0;
+      //     for (let i = 1; i < arr.length; i++) {
+      //       if (arr[a] != arr[i]) {
+      //         a++;
+      //         arr[a] = arr[i];
+      //         console.log("remove", arr[i]);
+      //       }
+      //     }
+      //     return a + 1;
+      //   }
+      //   for (let j = 0; j < k; j++) {
+      //     value.push(arr[j]);
+      //   }
+
+      document.getElementById("demo").innerHTML = value;
+    </script>
+  </body>
+</html>
