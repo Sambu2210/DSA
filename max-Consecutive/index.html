@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Max Consecutive Ones</h3>
+    <p>Array value: <span id="array"></span></p>
+    <p id="output"></p>
+    <script>
+      let a = [1, 1, 0, 1, 1, 1];
+      let n = a.length;
+      let count = 0;
+      let max = 0;
+      for (let i = 0; i < n; i++) {
+        if (a[i] == 1) {
+          count += 1;
+        } else {
+          count = 0;
+        }
+        if (count > max) {
+          max = count;
+        }
+      }
+      document.getElementById("array").innerHTML = a;
+      document.getElementById("output").innerHTML = max;
+    </script>
+  </body>
+</html>
