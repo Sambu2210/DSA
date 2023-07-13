@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Sort Color</h3>
+    <p>value: <span id="array"></span></p>
+    <p id="output"></p>
+    <script>
+      let a = [1];
+
+      let sum0 = 0;
+      let sum1 = 0;
+      let sum2 = 0;
+      let n = a.length;
+
+      for (i = 0; i < n; i++) {
+        if (a[i] == 0) {
+          sum0 += 1;
+        }
+        if (a[i] == 1) {
+          sum1 += 1;
+        } else {
+          sum2 += 1;
+        }
+      }
+      for (j = 0; j < sum0; j++) {
+        a[j] = 0;
+      }
+      for (k = sum0; k < sum1 + sum0; k++) {
+        a[k] = 1;
+      }
+      for (l = sum1 + sum0; l < n; l++) {
+        a[l] = 2;
+      }
+
+      document.getElementById("array").innerHTML = a;
+    </script>
+  </body>
+</html>
