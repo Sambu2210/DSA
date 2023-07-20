@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Length of the end value</h3>
+    <p>String value: <span id="string"></span></p>
+    <p id="output"></p>
+    <script>
+      let a = "Hello World  ";
+      let word = a.trimEnd();
+      let n = word.length;
+      let count = 0;
+
+      for (let i = n - 1; i >= 0; i--) {
+        if (word.charAt(i) == " ") {
+          break;
+        } else {
+          count++;
+        }
+      }
+      document.getElementById("string").innerHTML = count;
+    </script>
+  </body>
+</html>
