@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Best Time to Buy and Sell Stock</h3>
+    <p>Array value <span id="array"></span></p>
+    <p id="output"></p>
+    <script>
+      let prices = [7, 1, 5, 3, 6, 4];
+      let profit = 0;
+      let n = prices.length;
+      let minprice = prices[0];
+      for (let i = 1; i < n; i++) {
+        let currentprice = prices[i];
+        let currentprofit = currentprice - minprice;
+        if (currentprofit > profit) {
+          profit = currentprofit;
+        }
+        if (currentprice < minprice) {
+          minprice = currentprice;
+        }
+      }
+      document.getElementById("string").innerHTML = profit;
+    </script>
+  </body>
+</html>
