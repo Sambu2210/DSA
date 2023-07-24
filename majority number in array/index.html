@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Majority Element</h3>
+    <p>Array value: <span id="array"></span></p>
+    <p id="output"></p>
+    <script>
+      let nums = [1, 1, 0, 1, 1, 1];
+      let majority = nums[0];
+      let n = nums.length;
+      let count = 1;
+      for (let i = 1; i < n; i++) {
+        if (count == 0) {
+          count++;
+          majority = nums[i];
+        } else if (majority == nums[i]) {
+          count++;
+        } else {
+          count--;
+        }
+      }
+
+      document.getElementById("array").innerHTML = nums;
+      document.getElementById("output").innerHTML = majority;
+    </script>
+  </body>
+</html>
