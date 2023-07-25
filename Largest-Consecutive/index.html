@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Longest Consecutive Sequence</h2>
+    <p>Output: <span id="output"></span></p>
+    <script>
+      const arr = [100, 4, 200, 1, 3, 2];
+      arr.sort(function (a, b) {
+        return a - b;
+      });
+      let newarray = [];
+      let max = 0;
+      if (arr.length == 0) {
+        return 0;
+      }
+      if (arr.length > 0) {
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] == arr[i + 1]) {
+            continue;
+          }
+
+          if (arr[i] + 1 === arr[i + 1]) {
+            newarray.push(arr[i]);
+            if (max < newarray.length) {
+              max = newarray.length;
+            }
+          } else {
+            newarray = [];
+            max = max;
+          }
+        }
+      }
+      document.getElementById("demo").innerHTML = answer;
+    </script>
+  </body>
+</html>
