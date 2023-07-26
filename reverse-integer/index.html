@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>JavaScript Numbers</h1>
+    <h2>Reverse Integer</h2>
+
+    <p>Leedcode quetion no:7</p>
+
+    <p id="demo"></p>
+
+    <script>
+      let x = 1534236469;
+      let possitive = true;
+      if (x < 0) {
+        possitive = false;
+      }
+      let rev = 0;
+      x = Math.abs(x);
+      let max = 2147483647;
+      let min = -2147483648;
+      while (x > 0) {
+        rev = rev * 10 + (x % 10);
+        x = Math.floor(x / 10);
+        if (rev > max || rev < min) {
+          rev = 0;
+        }
+      }
+      if (!possitive) {
+        rev = -1 * rev;
+      }
+      document.getElementById("demo").innerHTML = rev;
+    </script>
+  </body>
+</html>
