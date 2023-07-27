@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Check Palindrom</h2>
+    <p>Output: <span id="output"></span></p>
+    <script>
+      let x = 121;
+      let num = x;
+      let reverse = 0;
+      let answer = true;
+      while (x > 0) {
+        reverse = reverse * 10 + (x % 10);
+        x = Math.floor(x / 10);
+      }
+      if (reverse == num) {
+        answer = true;
+      } else {
+        answer = false;
+      }
+
+      document.getElementById("demo").innerHTML = answer;
+    </script>
+  </body>
+</html>
